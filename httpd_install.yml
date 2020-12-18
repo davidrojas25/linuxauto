@@ -3,11 +3,13 @@
   hosts: rhel
   gather_facts: True
 
-- name: Install Apache
-  package:
-    name:
-      - httpd
+  tasks:
 
-- name: Create test web page
-  include_role:
-    name: "./roles/rhel_test_webpage"      
+    - name: Install Apache
+      package:
+        name:
+          - httpd
+
+    - name: Create test web page
+      include_role:
+        name: "./roles/rhel_test_webpage"      
