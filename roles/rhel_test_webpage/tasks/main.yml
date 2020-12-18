@@ -1,10 +1,11 @@
 ---
 
-- name: Copy Index page
-  win_copy:
+- name: Copy index page
+  copy:
     src: ./roles/rhel_test_webpage/files/index.html
-    dest: C:\Inetpub\wwwroot\
+    dest: /var/www/html/
+
 - name: Copy Red Hat Ansible Image
-  win_copy:
+  copy:
     src: ./roles/rhel_test_webpage/files/rh_ansible.jpg
-    dest: C:\Inetpub\wwwroot\
+    dest: /var/www/html/
