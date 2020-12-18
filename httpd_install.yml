@@ -1,0 +1,13 @@
+---
+- name: Install Apache Web Server
+  hosts: rhel
+  gather_facts: True
+
+- name: Install Apache
+  package:
+    name:
+      - httpd
+
+- name: Create test web page
+  include_role:
+    name: "./roles/rhel_test_webpage"      
