@@ -4,8 +4,10 @@
   copy:
     src: ./roles/rhel_test_webpage/files/index.html
     dest: /var/www/html/
+  become: yes  
 
 - name: Copy Red Hat Ansible Image
   copy:
     src: ./roles/rhel_test_webpage/files/rh_ansible.jpg
     dest: /var/www/html/
+  become: yes
