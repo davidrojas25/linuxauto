@@ -9,6 +9,7 @@
       package:
         name:
           - httpd
+      become: yes    
 
     - name: Create test web page
       include_role:
