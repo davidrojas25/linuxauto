@@ -11,3 +11,9 @@
     src: ./roles/rhel_test_webpage/files/rh_ansible.jpg
     dest: /var/www/html/
   become: yes
+
+- name: Copy Red Hat Enterprise Linux 8 Image
+  copy:
+    src: ./roles/rhel_test_webpage/files/rhel8.png
+    dest: /var/www/html/
+  become: yes  
